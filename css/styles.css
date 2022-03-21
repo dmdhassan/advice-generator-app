@@ -15,7 +15,7 @@ body {
 
 .container {
      width: min(85%, 35rem);
-     background-color: hsl(217, 19%, 38%);
+     background-color: hsl(217, 19%, 24%);
      display: grid;
      place-items: center;
      gap: .8rem;
@@ -40,6 +40,28 @@ body {
      position: relative;
 }
 
+.advice-content::after, .advice-content::before {
+     /* position: absolute; */
+     /* background-color: hsl(150, 100%, 66%); */
+     /* display: block; */
+     padding: 1rem;
+     aspect-ratio: 1;
+     border-radius: 50%;
+     align-items: center;
+}
+
+.advice-content::before {
+     content: open-quote;
+     top: 0;
+     left: 0;
+}
+
+.advice-content::after {
+     content: close-quote;
+     bottom: 0;
+     right: 0;
+}
+
 .dice {
      background-color: hsl(150, 100%, 66%);
      aspect-ratio: 1;
@@ -58,6 +80,41 @@ body {
 
 .divider {
      position: relative;
+     width: 100%;
+     padding-block-end: 1em;
+}
+
+.divider img:nth-child(2){ 
+     display: none;
+     }
+
+/* .divider::before {
+     content: '';
+     position: absolute;
+     width: 40%;
+     border-bottom: 1px solid hsl(217, 19%, 38%);
+     top: 40%;
+     left: 5%;
+}
+
+.divider::after {
+     content: '';
+     position: absolute;
+     width: 40%;
+     border-bottom: 1px solid hsl(217, 19%, 38%);
+     top: 40%;
+     right: 5%;
+} */
+
+@media (min-width: 45rem) {
+     .divider img:first-child{ 
+          display: none;
+     }
+     .divider img:nth-child(2){ 
+          display: block;
+
+          margin-inline: auto;
+     }
 }
 
 
